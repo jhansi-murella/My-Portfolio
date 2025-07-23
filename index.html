@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jhansi Priya</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Jhansi Priya" name="keywords">
+    <meta content="Jhansi Priya" name="description">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet"/>
+
+    <link rel="icon" href="img/jp.jpg" type="image/jpg">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #f0f2f5;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .main-navbar {
+            background: linear-gradient(to right, #343a40, #2c3136); /* Navbar background color - lighter gradient */
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 0.75rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .main-navbar .navbar-brand,
+        .main-navbar .nav-link {
+            color: white;
+        }
+        .main-navbar .nav-link {
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .main-navbar .nav-link:hover {
+            color: #FFD700 !important;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+        .main-navbar .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        .main-navbar .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .main-navbar .profile-img-nav {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-right: 0.75rem;
+        }
+
+        .main-content {
+            margin-left: 0;
+            padding-top: 5rem;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 991px) {
+            .main-navbar {
+                padding: 0.4rem 0.6rem; /* Even smaller padding for mobile navbar height */
+            }
+            .main-navbar .navbar-nav {
+                text-align: center;
+                margin-top: 1rem;
+            }
+            .main-navbar .nav-item {
+                margin-bottom: 0.5rem;
+            }
+            .main-navbar .nav-link {
+                font-size: 0.9rem;
+                padding: 0.3rem 0.5rem;
+            }
+            .main-navbar .navbar-brand span {
+                font-size: 0.9rem;
+            }
+            .main-navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 0.7rem;
+                padding-left: 0.8rem;
+            }
+            .main-navbar .navbar-toggler {
+                margin-left: auto;
+                padding: 0.25rem 0.4rem;
+            }
+            .main-navbar .navbar-brand {
+                padding-right: 0.5rem;
+            }
+        }
+
+        #header {
+            background: linear-gradient(to right, #8a2be2, #9370db, #b19cd9); /* Softer violet gradient */
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 1.5rem;
+            margin-bottom: 3rem; /* Added gap below hero header */
+        }
+        #header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        #header p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        #header .btn {
+            border-radius: 50px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        #header .btn-outline-light:hover {
+            background-color: white;
+            color: #4B0082;
+        }
+        #header .btn-light:hover {
+            background-color: #f0f0f0;
+            color: #8A2BE2;
+        }
+        #header .profile-img-hero {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            margin-bottom: 1.5rem;
+        }
+        /* Mobile adjustments for Header */
+        @media (max-width: 767px) {
+            #header {
+                padding: 2.5rem 0.5rem; /* Reduced vertical padding on small screens */
+                margin-top: 3.5rem; /* Adjusted space below fixed navbar */
+                margin-bottom: 1.5rem; /* Adjusted gap for mobile */
+            }
+            #header h1 {
+                font-size: 2rem; /* Smaller heading on small screens */
+            }
+            #header p.lead {
+                font-size: 0.9rem; /* Smaller lead text */
+                margin-bottom: 1rem;
+            }
+            #header .profile-img-hero {
+                width: 90px; /* Smaller image on small screens */
+                height: 90px;
+                margin-bottom: 0.75rem;
+            }
+            #header .btn-lg {
+                padding: 0.4rem 1rem; /* Smaller buttons on small screens */
+                font-size: 0.8rem;
+            }
+             #header .btn + .btn { /* Add gap between buttons specifically on small screens */
+                margin-left: 0.5rem; /* Smaller gap for mobile buttons */
+            }
+        }
+
+
+        .social-sidebar {
+            position: fixed;
+            top: 35%;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+        }
+        .social-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .social-sidebar li {
+            width: 160px;
+            height: 60px;
+            margin-right: -100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: margin 0.3s ease-in-out;
+        }
+        .social-sidebar li:hover {
+            margin-right: -10px;
+        }
+        .social-sidebar a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        .bg-instagram {
+            background-color: #e1306c;
+        }
+        .bg-linkedin {
+            background-color: #0077b5;
+        }
+        .bg-email {
+            background-color: #333;
+        }
+        @media (max-width: 768px) {
+            .social-sidebar {
+                display: none;
+            }
+        }
+
+        section {
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+        section h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        section .content-header hr {
+            border-top: 3px solid #000000;
+            width: 80px;
+            margin: 0.75rem auto 2rem auto;
+            border-radius: 5px;
+        }
+
+        .about .img-fluid {
+            border: 4px solid #000000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        .about blockquote {
+            border-left: 5px solid #000000;
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #666;
+        }
+        .about blockquote p {
+            font-size: 1rem;
+        }
+        /* Mobile adjustments for About Me */
+        @media (max-width: 767px) {
+            .about .img-fluid {
+                max-width: 150px !important; /* Even smaller image on mobile */
+                margin-bottom: 1rem;
+            }
+            .about p {
+                font-size: 0.9rem; /* Smaller text for better fit */
+                text-align: center;
+                padding: 0 5px; /* Reduced horizontal padding */
+            }
+            .about p.lead {
+                font-size: 0.95rem; /* Smaller lead paragraph */
+            }
+            .about blockquote {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 95%; /* More width */
+                text-align: center;
+                padding-left: 0.5rem; /* Further reduced padding for quote */
+            }
+            .about blockquote p {
+                font-size: 0.8rem;
+            }
+        }
+
+
+        .edu-col {
+            background-color: pink;
+            border-left: 4px solid #000000;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .exp-col {
+            background-color: #FFFDD0;
+            border-left: 4px solid #000000;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .edu-col:hover, .exp-col:hover {
+            background: linear-gradient(to right, #ffccd5, #ffb3c1); /* Light pink to slightly deeper pink gradient on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .edu-col span, .exp-col span {
+            display: block;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        .edu-col h3, .exp-col h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        .edu-col h4, .exp-col h4 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 0.25rem;
+        }
+        .edu-col h5, .exp-col h5 {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 0.75rem;
+        }
+        .exp-col p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .skills-section h2 {
+            font-family: "Raleway", sans-serif;
+            color: #000000;
+            text-shadow: none;
+        }
+        .skills-section .card {
+            background: lightblue;
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .skills-section .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .skills-section .card-title {
+            color: #000000;
+            font-weight: 600;
+        }
+        .skills-section .card-text strong {
+            color: #4B0082;
+        }
+
+        .portfolio-item .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .portfolio-item .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background-color: #e9ecef;
+        }
+        .portfolio-item .card img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            border: 3px solid #343a40;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .portfolio-item .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .portfolio-item .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .portfolio-item .card-text {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .modal-header {
+            background: linear-gradient(to right, #4B0082, #8A2BE2, #9370DB);
+            color: white;
+            border-bottom: none;
+            padding: 1.5rem;
+        }
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+        .modal-body {
+            background-color: #f4f6f8;
+            padding: 0;
+            overflow-y: auto;
+        }
+        .modal-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .modal-section:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+            background-color: #eaf1f7;
+        }
+        .modal-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .modal-section img {
+            width: 100%;
+            max-width: 700px;
+            margin: 15px auto;
+            border-radius: 8px;
+            display: block;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .modal-section p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.6;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .modal-section ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 1rem auto;
+            color: #444;
+        }
+        .modal-section ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .modal-section ul li::before {
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 1.1rem;
+        }
+
+        .modal-section.applied-project-content ul {
+            padding-left: 20px;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .modal-section.applied-project-content ul li::before {
+            content: none;
+        }
+
+        .modal-section .image-section {
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+            padding: 0;
+            box-shadow: none;
+            background-color: transparent;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-section .image-section:hover {
+            transform: none;
+        }
+
+        .modal-section .img-fluid.project-img {
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 1rem;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .modal-section .caption {
+            font-weight: 500;
+            text-align: center;
+            margin-top: 0.75rem;
+            color: #495057;
+            font-size: 0.95rem;
+            max-width: 700px;
+        }
+
+        .online-edu-tab-content .online-edu-header-inner {
+            background: linear-gradient(to right, #283c86, #45a247);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .online-edu-tab-content .online-edu-header-inner h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .online-edu-tab-content .online-edu-header-inner .lead {
+             font-size: 1.1rem;
+             color: #eee;
+        }
+
+        .online-edu-tab-content .nav-pills .nav-link.active {
+            background-color: #45a247;
+            color: white;
+        }
+        .online-edu-tab-content .nav-pills .nav-link {
+            color: #333;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .online-edu-tab-content .nav-pills .nav-link:hover {
+            background-color: pink;
+            color: #283c86;
+        }
+
+        .online-edu-tab-content .img-slide {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .online-edu-tab-content .content-section h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .online-edu-tab-content .content-section p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+            padding: 0 10px;
+        }
+        .online-edu-tab-content .content-section ul {
+            list-style: disc;
+            padding-left: 20px;
+            text-align: left;
+            max-width: 700px;
+            margin: 1rem auto;
+            color: #444;
+        }
+        .online-edu-tab-content .content-section ol {
+            padding-left: 20px;
+            text-align: left;
+            max-width: 700px;
+            margin: 1rem auto;
+            color: #444;
+        }
+
+        #appliedProjectsTab .nav-link.active {
+            background-color: #4B0082;
+            color: white;
+        }
+        #appliedProjectsTab .nav-link {
+            color: #666;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #appliedProjectsTab .nav-link:hover {
+            background-color: #f0f0f0;
+            color: #4B0082;
+        }
+
+        .online-edu-tab-content .accordion-button:not(.collapsed) {
+            background-color: #45a247;
+            color: white;
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+        }
+        .online-edu-tab-content .accordion-button {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+        }
+        .online-edu-tab-content .accordion-body {
+            background-color: #ffffff;
+            color: #444;
+        }
+
+        .ethical-project-header {
+            background: linear-gradient(to right, #283c86, #45a247);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .ethical-project-header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .ethical-project-description {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .ethical-project-description .section-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #000000;
+        }
+        .ethical-project-description ul {
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 20px;
+            list-style: disc;
+            text-align: left;
+            color: #444;
+        }
+        .ethical-project-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .ethical-image-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .ethical-image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .ethical-image-section img:hover {
+            transform: scale(1.02);
+        }
+        .ethical-img-caption {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 15px;
+            color: #495057;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .ethical-project-footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #555;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .deloitte-header-inner {
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .deloitte-header-inner h1 {
+            font-size: 2.3rem;
+            font-weight: bold;
+        }
+        .deloitte-header-inner .header-bottom .btn {
+            background-color: #fff;
+            color: #666;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .deloitte-header-inner .header-bottom .btn:hover {
+            background-color: #e9ecef;
+            color: #4B0082;
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .deloitte-project-summary .section-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        .deloitte-project-summary .list-group {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .deloitte-project-summary .list-group-item {
+            background-color: #fefefe;
+            border: none;
+            font-size: 1rem;
+            padding: 0.75rem 1.25rem;
+            color: #333;
+        }
+        .deloitte-project-summary .list-group-item:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .deloitte-project-summary .list-group-flush .list-group-flush {
+            margin-top: 0;
+        }
+        .deloitte-image-gallery .image-section {
+            padding: 30px 15px;
+            text-align: center;
+        }
+        .deloitte-image-gallery .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .deloitte-image-gallery .image-section img:hover {
+            transform: scale(1.02);
+        }
+        .deloitte-image-gallery .img-caption {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 12px;
+            color: #495057;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .deloitte-toggle-button {
+            margin-top: 3rem !important;
+            margin-bottom: 2rem !important;
+        }
+        .deloitte-footer-inner {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #555;
+            width: 100%;
+            margin-top: 3rem;
+        }
+
+        .student-modal-header-inner {
+            background: linear-gradient(to right, #283c86, #45a247);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .student-modal-header-inner h3 {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .student-dashboard-title {
+            text-align: center;
+            margin: 40px auto 20px auto;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343a40;
+            max-width: 800px;
+        }
+        .student-summary-box {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #e0e0e0;
+        }
+        .student-summary-box h5 {
+            color: #007bff;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .student-summary-box ul {
+            list-style: disc;
+            padding-left: 25px;
+            color: #333;
+        }
+        .student-image-card {
+            border: none;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .student-image-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .student-image-card .card-img-top {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .student-image-card .card-body {
+            padding: 20px;
+        }
+        .student-description {
+            font-size: 0.95rem;
+            color: #495057;
+            text-align: center;
+        }
+        .student-content-section h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #343a40;
+            text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .student-content-section p {
+            font-size: 1.05rem;
+            color: #555;
+            text-align: center;
+            padding: 0 15px;
+        }
+        .student-modal-footer-inner {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+        .student-modal-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .student-modal-section .row {
+            align-items: center;
+        }
+        .student-modal-section .col-md-6:first-child.order-2-md {
+            order: 2;
+        }
+        @media (min-width: 768px) {
+            .student-modal-section .custom-row:nth-child(even) .col-md-6:first-child {
+                order: 2;
+            }
+            .student-modal-section .custom-row:nth-child(even) .col-md-6:last-child {
+                order: 1;
+            }
+        }
+        @media (max-width: 767px) {
+            .student-modal-section .custom-row .col-md-6 {
+                order: unset !important;
+            }
+        }
+
+        .contact-info .fa {
+            color: #555;
+            margin-right: 0.7rem;
+        }
+        .contact-info p, .contact-info a {
+            font-size: 1.1rem;
+            color: #555;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+        }
+        .contact-info a:hover {
+            color: red;
+        }
+        .contact-info .social a {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            color: inherit;
+            border-radius: 0;
+            padding: 0;
+            margin-right: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .contact-info .social .fa-linkedin {
+            color: #0077b5;
+        }
+        .contact-info .social .fa-instagram {
+            color: #E1306C;
+        }
+        .contact-info .social .fa-envelope {
+            color: #333;
+        }
+
+        .contact-info .social a:hover {
+            background-color: transparent;
+            transform: none;
+            box-shadow: none;
+            color: #666;
+        }
+
+        .futuristic-form {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 2rem;
+        }
+        .futuristic-input {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .futuristic-input:focus {
+            border-color: #4B0082;
+            box-shadow: 0 0 0 0.25rem rgba(75, 0, 130, 0.25);
+            outline: none;
+        }
+        .futuristic-btn {
+            background: linear-gradient(to right, #4B0082, #8A2BE2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .futuristic-btn:hover {
+            background: linear-gradient(to right, #8A2BE2, #9370DB);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .futuristic-btn .material-icons {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: transparent;
+            color: #212529;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+            font-size: 2.5rem;
+            z-index: 999;
+            display: none;
+            box-shadow: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            color: #4B0082;
+            background: transparent;
+        }
+
+        .icon-pulse {
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/profile.jpg" class="profile-img-nav" alt="Profile" />
+            <span class="ms-2">Jhansi Priya Murella</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">EDUCATION</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">EXPERIENCE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">PROJECTS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+            </ul>
+            </div>
+    </div>
+</nav>
+
+<div class="social-sidebar" align="right">
+    <ul>
+        <li class="bg-instagram">
+            <a href="https://www.instagram.com/__priya__murella__" target="_blank">
+                <i class="fab fa-instagram"></i><span>Instagram</span>
+            </a>
+        </li>
+        <li class="bg-linkedin">
+            <a href="https://www.linkedin.com/in/jhansi-priya-712163357" target="_blank">
+                <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+            </a>
+        </li>
+        <li class="bg-email">
+            <a href="mailto:jhansipriyamurellaa@gmail.com">
+                <i class="fas fa-envelope"></i><span>Email</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <header id="header" class="text-center container">
+        <img src="img/profile.jpg" alt="Jhansi Priya Murella" class="profile-img-hero mb-4">
+        <h1><b>JHANSI PRIYA MURELLA</b></h1>
+        <p class="lead">Data & Reporting Analyst | Web Developer | Data Engineer</p>
+        <div class="mt-4">
+            <a href="https://drive.google.com/file/d/1LqiMq0IJLMVIKAzq94qmxl6im39oXSCp/view?usp=sharing" class="btn btn-outline-light btn-lg me-3">
+                <i class="fa fa-download"></i> Resume
+            </a>
+            <a href="mailto:jhansipriyamurellaa@gmail" class="btn btn-light btn-lg">
+                <i class="fa fa-hands-helping"></i> Hire Me
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="about container py-5">
+        <div class="content-header mb-4 text-center">
+            <h2>About Me</h2>
+            <hr class="mx-auto">
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-5 text-center mb-4 mb-md-0">
+                <img src="img/jp1.jpg" alt="Jhansi Priya Murella" class="img-fluid rounded shadow" style="max-width: 300px;">
+            </div>
+            <div class="col-md-7">
+                <p class="lead">
+                    I am a highly motivated and detail-oriented student at Saint Louis University with a strong foundation in IT support, programming, and data analysis. My hands-on experience spans academic projects in machine learning, data visualization, and web development.
+                </p>
+                <p>
+                    <i class="fa fa-award text-warning"></i> CCNA Certified |
+                    <i class="fa fa-code text-info"></i> Skilled in Python, HTML/CSS |
+                    <i class="fa fa-laptop-code text-success"></i> Comfortable in Linux/Windows environments
+                </p>
+                <blockquote class="blockquote mt-3">
+                    <p class="mb-0">"I believe in turning data into decisions and ideas into action."</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education container py-5">
+        <div class="content-header mb-4 text-center">
+            <h2><i class="fa fa-graduation-cap icon-pulse"></i> Education</h2>
+            <hr class="mx-auto">
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="edu-col">
+                    <span>Jan-2024 to Dec-2025</span>
+                    <h3>Master's Degree</h3>
+                    <h4>SAINT LOUIS UNIVERSITY</h4>
+                    <h5>Score: 3.8/4.0 (GPA)</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="edu-col">
+                    <span>Aug-2019 to May-2023</span>
+                    <h3>Bachelor's Degree</h3>
+                    <h4>DHANEKULA INSTITUTE OF ENGINEERING AND TECHNOLOGY</h4>
+                    <h5>Score: 3.5/4.0 (GPA)</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section container py-5">
+        <h2 class="text-center mb-5">
+            <span class="bi bi-rocket-fill icon-pulse"></span> My Core Skills
+        </h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-cpu-fill me-2"></i>Technical Proficiency</h5>
+                        <p class="card-text">
+                            Linux, Windows, Git, Replit, MS Office, Hardware/Software, Spreadsheet <br> Programming: C, Java, Python, JavaScript, HTML, CSS, MySQL <br>Cloud: AWS, Salesforce, Azure
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-bar-chart-line-fill me-2"></i>Analytical Skills</h5>
+                        <p class="card-text">
+                            Solving challenges, optimizing systems, and analyzing data with Excel, Power BI, Tableau.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-people-fill me-2"></i>Interpersonal Skills</h5>
+                        <p class="card-text">
+                            Collaboration, Leadership, Training, Decision Making, Communication, Team Work, Adaptability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-headset me-2"></i>Customer Relations</h5>
+                        <p class="card-text">
+                            Building relationships, understanding user needs, providing tech assistance via email, voice, and support tools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience container py-5">
+        <div class="content-header mb-4 text-center">
+            <h2><i class="fa fa-graduation-cap icon-pulse"></i> Experience</h2>
+            <hr class="mx-auto">
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="exp-col">
+                    <span>May-2025  to  Present</span>
+                    <h3>Guardian Angel Settlement Association </h3>
+                    <h4> St. Louis, MO</h4>
+                    <h5>Data Management Intern </h5>
+                    <p>• Assists with organizing and updating client and service records in accordance with privacy standards. <br>
+                        • Supports team with report preparation and communication related to community programs. <br>
+                        • Collaborates on onboarding procedures and ensures accurate data entry into Salesforce. <br>
+                        • Utilizes Python libraries such as BeautifulSoup and Requests for web scraping to gather and preprocess external data for analysis and reporting. <br>
+                        • Collaborating with Salesforce and Power BI for better implementation of data integration & data visualization. </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="exp-col">
+                    <span>Jan-2023  to  Aug-2023</span>
+                    <h3>Innogeeks Technologies </h3>
+                    <h4>Vijayawada, India</h4>
+                    <h5> Operations Intern</h5>
+                    <p> • Assist in analyzing IT performance initiatives, identifying inefficiencies, and proposing actionable improvements. <br>
+                        • Utilize MS Office tools to document findings, prepare reports, and facilitate data driven decision-making. <br>
+                        • Assisted the operations team in maintaining inventory and ensuring supplies were reordered in a timely manner. <br>
+                        • Collaborated with team members to streamline processes and improve operational efficiency. <br>
+                        • Managed documentation for construction projects, including lien waivers and project completion paperwork. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio container py-5">
+        <div class="content-header mb-4 text-center">
+            <h2><span class="material-icons icon-pulse">code</span> Projects</h2>
+            <hr class="mx-auto">
+        </div>
+
+        <div class="row g-3 portfolio-container">
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#childbirthModal">
+                    <div class="card card-hover h-100 text-center">
+                        <img src="img/portfolio-1.jpg" alt="childbirth" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">PREDICTION OF CHILDBIRTH USING ML ALGORITHMS</h5>
+                            <p class="card-text">Bachelor's Major Project - Dhanekula Institute of Engineering & Technology</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#appliedAnalyticsModal">
+                    <div class="card card-hover h-100 text-center">
+                        <img src="img/ai.jpg" alt="Applied Analytics" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">APPLIED ANALYTICS & METHODS-1</h5>
+                            <p class="card-text"> Course Project – Saint Louis University</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#ethicalDecisionModal">
+                    <div class="card card-hover h-100 text-center">
+                        <img src="img/etics.jpg" alt="Decision Making" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">ETHICAL, EVIDENCE-BASED DECISION MAKING</h5>
+                            <p class="card-text">Academic Project – Saint Louis University</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#deloitteEAModal">
+                    <div class="card card-hover h-100 text-center">
+                        <img src="img/deloitte.jpg" alt="Deloitte Case Study" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">DELOITTE – ENTERPRISE ARCHITECTURE</h5>
+                            <p class="card-text">Course Project – Saint Louis University</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#studentAttendanceModal">
+                    <div class="card card-hover h-100 text-center">
+                        <img src="img/student.jpg" alt="Student Attendance" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+                        <div class="card-body">
+                            <h5 class="card-title">STUDENT ATTENDANCE PATTERN ANALYSIS</h5>
+                            <p class="card-text">Academic Project – Saint Louis University</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="childbirthModal" tabindex="-1" aria-labelledby="childbirthModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="childbirthModalLabel">Prediction of Childbirth Using ML Algorithms</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="modal-section">
+                        <h2>📊 Project Summary</h2>
+                        <ul>
+                            <li>Developed a machine learning model to predict the most suitable method of childbirth (vaginal, C-section, or other).</li>
+                            <li>Used Logistic Regression, Decision Trees, and Random Forests on preprocessed clinical datasets.</li>
+                            <li>Achieved accurate predictions to assist healthcare professionals.</li>
+                            <li>Demonstrated ethical data science in healthcare.</li>
+                        </ul>
+                    </section>
+
+                    <section class="modal-section">
+                        <h2>Login Page</h2>
+                        <img src="img/login.jpg" alt="Login" />
+                        <p>User logs in to our website to predict the mode of childbirth.</p>
+                    </section>
+
+                    <section class="modal-section">
+                        <h2>Model Performance</h2>
+                        <img src="img/score.jpg" alt="Score" />
+                        <p>We achieved an accuracy of 87.5% using precision, recall, and F1-score.</p>
+                    </section>
+
+                    <section class="modal-section">
+                        <h2>Prediction Dashboard</h2>
+                        <img src="img/predict.jpg" alt="Prediction" />
+                        <p>Users input health details to receive the predicted childbirth mode.</p>
+                    </p>
+                    </section>
+
+                    <section class="modal-section">
+                        <h2>Algorithm Accuracies</h2>
+                        <img src="img/pie.jpg" alt="Pie Chart" />
+                        <p>Pie chart displays comparative model accuracy.</p>
+                        <img src="img/line.jpg" alt="Line Chart" style="margin-top: 15px;" />
+                        <p>Line chart visualizes accuracy trends across models.</p>
+                    </section>
+
+                </div>
+                <footer class="text-center text-muted mb-4">
+                    © 2025 Jhansi Priya – Childbirth Prediction Project
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="appliedAnalyticsModal" tabindex="-1" aria-labelledby="appliedAnalyticsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appliedAnalyticsModalLabel">Applied Analytics & Methods-1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs justify-content-center mb-4" id="appliedProjectsTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="ai-tab" data-bs-toggle="tab" data-bs-target="#aiContent" type="button" role="tab" aria-controls="aiContent" aria-selected="true">
+                                AI Impact on Employee Satisfaction
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="online-education-tab" data-bs-toggle="tab" data-bs-target="#onlineEducationContent" type="button" role="tab" aria-controls="onlineEducationContent" aria-selected="false">
+                                Online Education Trends
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="appliedProjectsTabContent">
+                        <div class="tab-pane fade show active" id="aiContent" role="tabpanel" aria-labelledby="ai-tab">
+                            <section class="modal-section applied-project-content">
+                                <h2 class="text-center mb-3">AI Impact on Employee Satisfaction</h2>
+                                <p class="lead text-center">An Analytical Study on AI Workload Management and Satisfaction Metrics</p>
+                                <div class="p-3 bg-light border rounded shadow-sm my-4 w-100" style="max-width: 700px;">
+                                    <ul class="mb-0 text-start">
+                                        <li>Analyzed the influence of Artificial Intelligence adoption on employee satisfaction levels using advanced statistical methods.</li>
+                                        <li>Employed Power BI for interactive data visualization, R programming for data manipulation and modeling, and SPSS for statistical analysis.</li>
+                                        <li>Delivered insights that helped understand how AI integration affects workforce morale, supporting data-driven decision-making.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="row image-section w-100 justify-content-center">
+                                    <div class="col-lg-10 text-center">
+                                        <img src="img/scatterplot.jpg" class="img-fluid shadow project-img" alt="Scatter Plot">
+                                        <div class="caption">
+                                            Scatter Plot: Relationship between average monthly working hours and employee satisfaction level. A near-flat regression line and low R² value (~0.0004) indicate minimal correlation.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row image-section w-100 justify-content-center">
+                                    <div class="col-lg-10 text-center">
+                                        <img src="img/statics.jpg" class="img-fluid shadow project-img" alt="Residuals Statistics">
+                                        <div class="caption">
+                                            Residuals Statistics: Mean residual near zero confirms model is unbiased, though variability suggests unexplained factors.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row image-section w-100 justify-content-center">
+                                    <div class="col-lg-10 text-center">
+                                        <img src="img/plot.jpg" class="img-fluid shadow project-img" alt="P-P Plot">
+                                        <div class="caption">
+                                            P-P Plot: Deviations from the diagonal line show residuals aren’t perfectly normally distributed, indicating limits of linear model.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row image-section w-100 justify-content-center">
+                                    <div class="col-lg-10 text-center">
+                                        <img src="img/coreleation.jpg" class="img-fluid shadow project-img" alt="Correlations Table">
+                                        <div class="caption">
+                                            Correlation Matrix: Very weak negative correlation (-0.020) between satisfaction and hours worked. Not statistically significant (p = 0.085).
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tab-pane fade" id="onlineEducationContent" role="tabpanel" aria-labelledby="online-education-tab">
+                            <section class="modal-section applied-project-content online-edu-tab-content">
+                                <div class="online-edu-header-inner">
+                                    <h3 class="mt-3">Explore Trends in Online Education</h3>
+                                    <p class="lead">Data-Driven Insights – Online Courses</p>
+                                </div>
+
+                                <ul class="nav nav-pills mb-3 justify-content-center" id="onlineInsightsTabs" role="tablist">
+                                    <li class="nav-item"><button class="nav-link active" id="online-overview-tab" data-bs-toggle="pill" data-bs-target="#onlineOverviewContent" type="button" role="tab" aria-controls="onlineOverviewContent" aria-selected="true">Overview</button></li>
+                                    <li class="nav-item"><button class="nav-link" id="online-stats-tab" data-bs-toggle="pill" data-bs-target="#onlineStatsContent" type="button" role="tab" aria-controls="onlineStatsContent" aria-selected="false">Statistics</button></li>
+                                    <li class="nav-item"><button class="nav-link" id="online-analysis-tab" data-bs-toggle="pill" data-bs-target="#onlineAnalysisContent" type="button" role="tab" aria-controls="onlineAnalysisContent" aria-selected="false">Analysis</button></li>
+                                    <li class="nav-item"><button class="nav-link" id="online-recommendations-tab" data-bs-toggle="pill" data-bs-target="#onlineRecommendationsContent" type="button" role="tab" aria-controls="onlineRecommendationsContent" aria-selected="false">Recommendations</button></li>
+                                </ul>
+
+                                <div class="tab-content w-100">
+                                    <div class="tab-pane fade show active" id="onlineOverviewContent" role="tabpanel" aria-labelledby="online-overview-tab">
+                                        <div class="content-section">
+                                            <h3>Background & Topic</h3>
+                                            <p>
+                                                The project analyzes the Online Courses Usage and History Dataset to explore trends in online education.
+                                                <br><br>
+                                                The rise of online learning—especially post-pandemic—has made it important to understand user engagement, course popularity,
+                                                and completion rates.
+                                            </p>
+                                            <p>Source: Kaggle – Online Courses Dataset.</p>
+                                            <ul>
+                                                <li>Demographics (age, region)</li>
+                                                <li>Course preferences (topics, duration)</li>
+                                                <li>Engagement (time spent)</li>
+                                                <li>Completion vs. dropout rates</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="onlineStatsContent" role="tabpanel" aria-labelledby="online-stats-tab">
+                                        <div class="content-section row justify-content-center align-items-center">
+                                            <div class="col-md-6">
+                                                <img loading="lazy" src="img/rs.png" class="img-slide" alt="Stats Slide">
+                                            </div>
+                                            <div class="col-md-6 text-start">
+                                                <h3>Descriptive Statistics</h3>
+                                                <ul>
+                                                    <li>Avg Duration: 55.14 hrs</li>
+                                                    <li>Completion Rate: 75.12%</li>
+                                                    <li>Avg Rating: 3.99 / 5</li>
+                                                    <li>Price Range: ~$10 to ~$200</li>
+                                                </ul>
+                                                <p>Insight: Premium pricing doesn't deter engagement if ratings are high.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="onlineAnalysisContent" role="tabpanel" aria-labelledby="online-analysis-tab">
+                                        <div class="content-section">
+                                            <h3>Analysis</h3>
+                                            <div class="accordion" id="onlineEduAnalysisAccordion">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#anovaContent" aria-expanded="true" aria-controls="anovaContent">
+                                                            ANOVA: Completion Rates Across Categories
+                                                        </button>
+                                                    </h2>
+                                                    <div id="anovaContent" class="accordion-collapse collapse show" data-bs-parent="#onlineEduAnalysisAccordion">
+                                                        <div class="accordion-body">
+                                                            <img loading="lazy" src="img/anova.jpg" class="img-slide" alt="ANOVA Slide"/>
+                                                            <p>No significant differences across categories. Focus on Data Science for its higher completion (48.7%).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#correlationContent" aria-expanded="false" aria-controls="correlationContent">
+                                                            Correlation: Price vs Completion
+                                                        </button>
+                                                    </h2>
+                                                    <div id="correlationContent" class="accordion-collapse collapse" data-bs-parent="#onlineEduAnalysisAccordion">
+                                                        <div class="accordion-body">
+                                                            <img loading="lazy" src="img/cr.png" class="img-slide" alt="Correlation Slide"/>
+                                                            <p>Price and completion rates are nearly uncorrelated. Consider price as a commitment driver instead.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#clustersContent" aria-expanded="false" aria-controls="clustersContent">
+                                                            Cluster & Factor Analysis
+                                                        </button>
+                                                    </h2>
+                                                    <div id="clustersContent" class="accordion-collapse collapse" data-bs-parent="#onlineEduAnalysisAccordion">
+                                                        <div class="accordion-body">
+                                                            <img loading="lazy" src="img/ca.png" class="img-slide" alt="Cluster Slide"/>
+                                                            <p>Three user segments exist. Final clusters converge on similar price & completion values. Targeted marketing recommended.</p>
+                                                            <img loading="lazy" src="img/fa.png" class="img-slide" alt="Factor Slide"/>
+                                                            <p>Factors Identified: Value (price/duration) & Quality (completion/rating).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="onlineRecommendationsContent" role="tabpanel" aria-labelledby="online-recommendations-tab">
+                                        <div class="content-section">
+                                            <h3>Recommendations</h3>
+                                            <ol>
+                                                <li>Set pricing thresholds based on category.</li>
+                                                <li>Design with engagement in mind.</li>
+                                                <li>Segment marketing by learner type.</li>
+                                                <li>Focus on top-performing categories.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div> </section>
+                        </div>
+                    </div>
+                </div>
+                <footer class="text-center text-muted mb-4">
+                    © 2025 Jhansi Priya – Applied Analytics Projects
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ethicalDecisionModal" tabindex="-1" aria-labelledby="ethicalDecisionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ethicalDecisionModalLabel">Ethical, Evidence-Based Decision Making</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <header class="ethical-project-header">
+                        <h1>Implementing Predictive Analytics for Assessing a Bank's Credit Risk</h1>
+                    </header>
+
+                    <section class="modal-section ethical-project-description">
+                        <h2 class="section-title">Project Summary</h2>
+                        <ul class="text-start mx-auto">
+                            <li>Designed a predictive model to assess credit risk for banking clients as part of the Ethical Evidence-Based Decision Making course.</li>
+                            <li>Applied data-driven techniques to evaluate borrower risk profiles and integrated argument maps to present ethical considerations and justifications.</li>
+                            <li>Demonstrated how predictive analytics can support responsible, transparent, and ethically sound lending decisions.</li>
+                        </ul>
+
+                        <button class="btn btn-primary mt-4" type="button" id="ethicalToggleButton"
+                                data-bs-toggle="collapse" data-bs-target="#ethicalArgumentMaps"
+                                aria-expanded="false" aria-controls="ethicalArgumentMaps">
+                            View Argument Maps
+                        </button>
+                    </section>
+
+                    <div class="collapse" id="ethicalArgumentMaps">
+                        <section class="modal-section ethical-image-section">
+                            <a href="img/4.jpg" data-lightbox="ethical-maps" data-title="Credit Risk Assessment - Ethical and Situational Considerations">
+                                <img src="img/4.jpg" alt="Credit Risk Mind Map" />
+                            </a>
+                            <p class="ethical-img-caption">This map explores the strategic use of predictive analytics in credit risk assessment and the ethical or situational challenges banks may face during implementation.</p>
+                        </section>
+
+                        <section class="modal-section ethical-image-section">
+                            <a href="img/8.jpg" data-lightbox="ethical-maps" data-title="Evidence-Based Decision Making in Training Contexts">
+                                <img src="img/8.jpg" alt="Evidence in Decision Making Mind Map" />
+                            </a>
+                            <p class="ethical-img-caption">This map highlights the role of diverse evidence types—experimental, scientific, organizational, and stakeholder—in forming effective, context-sensitive decisions.</p>
+                        </section>
+
+                        <section class="modal-section ethical-image-section">
+                            <a href="img/10.jpg" data-lightbox="ethical-maps" data-title="Evidence Dependence in Predictive Model Selection">
+                                <img src="img/10.jpg" alt="Evidence for Predictive Analytics Mind Map" />
+                            </a>
+                            <p class="ethical-img-caption">This mind map emphasizes the importance of evidence in selecting appropriate predictive analytics models and how it influences stakeholder trust and outcome accuracy.</p>
+                        </section>
+                    </div>
+                </div>
+                <footer class="text-center text-muted mb-4">
+                    © 2025 Jhansi Priya – Ethical, Evidence-Based Decision Making Project
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deloitteEAModal" tabindex="-1" aria-labelledby="deloitteEAModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deloitteEAModalLabel">Deloitte – Enterprise Architecture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <header class="deloitte-header-inner">
+                        <h1 class="header-title">Deloitte Enterprise Architecture Project Dashboard</h1>
+                        <div class="header-bottom mt-3">
+                            <a href="https://sites.google.com/view/deloitte-consulting?usp=sharing" class="btn btn-light">Deloitte Profile</a>
+                        </div>
+                    </header>
+
+                    <section class="modal-section deloitte-project-summary">
+                        <h2 class="section-title text-center">Project Summary</h2>
+                        <div class="container">
+                            <ul class="list-group list-group-flush mx-auto" style="max-width: 800px;">
+                                <li class="list-group-item">Conducted an in-depth organizational study of Deloitte Consulting as part of the Enterprise Architecture & Systems Administration course.</li>
+                                <li class="list-group-item">Collaborated with a teammate to model Deloitte’s business structure and technology landscape using industry-standard tools.</li>
+                                <li class="list-group-item">Developed a comprehensive suite of deliverables including:</li>
+                                <ul class="list-group list-group-flush ps-4">
+                                    <li class="list-group-item">Detailed Business Model Canvas (BMC) and Business Process Model and Notation (BPMN) diagrams.</li>
+                                    <li class="list-group-item">Comprehensive data models (ER diagrams) and architecture layers (Business, Application, Technology).</li>
+                                    <li class="list-group-item">Agile project management artifacts using Jira and Trello for tracking and automation.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary mt-5 deloitte-toggle-button" type="button" id="deloitteToggleButton"
+                                data-bs-toggle="collapse" data-bs-target="#deloitteEAVisuals"
+                                aria-expanded="false" aria-controls="deloitteEAVisuals">
+                            View EA Visuals
+                        </button>
+                    </section>
+
+                    <div class="collapse" id="deloitteEAVisuals">
+                        <section class="modal-section deloitte-image-gallery">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/trello.jpg" data-lightbox="deloitte-ea" data-title="Trello Progress Board">
+                                            <img src="img/trello.jpg" alt="Trello Board" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Trello board used to manage weekly EA assignments visually.</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/jira.jpg" data-lightbox="deloitte-ea" data-title="Jira EA Deliverables Board">
+                                            <img src="img/jira.jpg" alt="Jira Board" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Jira board showing task progression and automation workflows.</p>
+                                    </div>
+                                    <div class="col-md-10 mb-4">
+                                        <a href="img/ja.jpg" data-lightbox="deloitte-ea" data-title="Jira Automation Audit Log">
+                                            <img src="img/ja.jpg" alt="Jira Automation Log" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Jira automation rules and logs for auto-subtask creation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="modal-section deloitte-image-gallery">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/mindmap.jpg" data-lightbox="deloitte-ea" data-title="Mind Map: Deloitte Data & Tech">
+                                            <img src="img/mindmap.jpg" alt="Mindmap" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Mind map showcasing Deloitte’s core business, tech, and shared data interactions.</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/core.jpg" data-lightbox="deloitte-ea" data-title="Core Data Mapping">
+                                            <img src="img/core.jpg" alt="Core Data Diagram" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Core relationships among data types, technologies, and processes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="modal-section deloitte-image-gallery">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/bmc.jpg" data-lightbox="deloitte-ea" data-title="Business Model Canvas">
+                                            <img src="img/bmc.jpg" alt="Business Model" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Business Model Canvas outlining Deloitte’s value propositions and partners.</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/bpmn.jpg" data-lightbox="deloitte-ea" data-title="BPMN Workflow Diagram">
+                                            <img src="img/bpmn.jpg" alt="BPMN" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">BPMN diagram depicting consulting workflow from client request to delivery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="modal-section deloitte-image-gallery">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/archi.jpg" data-lightbox="deloitte-ea" data-title="EA Architecture Layers">
+                                            <img src="img/archi.jpg" alt="EA Architecture" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Enterprise Architecture layers: Business, Application, and Technology.</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a href="img/e-r.jpg" data-lightbox="deloitte-ea" data-title="ER Data Model">
+                                            <img src="img/e-r.jpg" alt="ER Diagram" />
+                                        </a>
+                                        <p class="img-caption deloitte-img-caption">Entity-Relationship diagram linking customer, orders, and products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div></div><footer class="text-center text-muted mb-4">
+                    © 2025 Jhansi Priya – Deloitte – Enterprise Architecture Project
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="studentAttendanceModal" tabindex="-1" aria-labelledby="studentAttendanceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="studentAttendanceModalLabel">Student Attendance Pattern Analysis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <header class="student-modal-header-inner">
+                        <h3 class="mt-3">📊 Student Attendance Pattern Analysis</h3>
+                    </header>
+
+                    <div class="container my-4">
+                        <div class="student-summary-box">
+                            <h5 class="mb-3 text-primary">🔍 Project Summary: Power BI Attendance Analysis</h5>
+                            <ul class="mb-0">
+                                <li>Designed and built a Power BI solution to analyze student attendance patterns by day and 30-minute time slots using raw entry/exit logs.</li>
+                                <li>Processed and transformed attendance data (Attendance Date, In, Out, Child ID) using Power Query, generating dynamic time intervals for each student's presence in the building.</li>
+                                <li>Created a detailed matrix visualization showing distinct student counts per time slot across weekdays, revealing peak hours and anomalies.</li>
+                                <li>Handled complex time logic, null values, and data normalization challenges to deliver an accurate and interactive dashboard for internal reporting.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="student-dashboard-title">Visual Analysis Dashboard</div>
+
+                        <div class="row align-items-center my-4 custom-row student-modal-section">
+                            <div class="col-md-6">
+                                <div class="card student-image-card">
+                                    <img src="img/may.jpg" class="card-img-top" alt="Treemap May" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Treemap Overview - May</h5>
+                                        <p class="description student-description">This treemap visualizes average student attendance by time in May. The block sizes indicate student density per time slot, with color differences helping to distinguish them quickly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center student-content-section">
+                                <h4>🔥 Identify Peak Attendance</h4>
+                                <p>Helps analyze high-density periods and optimize scheduling or resources for maximum efficiency during those hours.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center my-4 custom-row student-modal-section">
+                            <div class="col-md-6 text-center student-content-section order-2-md">
+                                <h4>📈 Incremental Student Count - April</h4>
+                                <p>This waterfall chart breaks down how average student counts build across April’s time slots, ending with a clear total.</p>
+                            </div>
+                            <div class="col-md-6 order-1-md">
+                                <div class="card student-image-card">
+                                    <img src="img/april.jpg" class="card-img-top" alt="Waterfall Chart April" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Waterfall Chart - April</h5>
+                                        <p class="description student-description">Each step in this chart shows student increase for a time slot. Green bars represent gain, culminating with the blue bar showing the total number of students over the day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center my-4 custom-row student-modal-section">
+                            <div class="col-md-6">
+                                <div class="card student-image-card">
+                                    <img src="img/march.jpg" class="card-img-top" alt="Line Graph March" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Line Graph - March</h5>
+                                        <p class="description student-description">The line graph for March reveals a rapid rise in student presence early in the day and a consistent plateau until the afternoon, followed by a gradual drop-off toward the evening.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center student-content-section">
+                                <h4>📊 Consistent Engagement Zones</h4>
+                                <p>These patterns suggest stable attendance during core learning hours and offer insight into behavioral trends.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center my-4 custom-row student-modal-section">
+                            <div class="col-md-6 text-center student-content-section order-2-md">
+                                <h4>📉 Average Real-time Observation</h4>
+                                <p>This graph showcases near real-time averages across all time labels—ideal for daily operation insights and campus analytics.</p>
+                            </div>
+                            <div class="col-md-6 order-1-md">
+                                <div class="card student-image-card">
+                                    <img src="img/avg.jpg" class="card-img-top" alt="Line Graph Current" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Line Graph - Overall Average</h5>
+                                        <p class="description student-description">The graph maintains a high average from 9:00 AM to 3:00 PM, confirming the core hours of maximum activity on campus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div><footer class="text-center text-muted mb-4 student-modal-footer-inner">
+                    © 2025 Jhansi Priya | Designed for Engagement Insights
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="contact" class="contact container py-5">
+        <div class="content-header mb-4 text-center">
+            <h2><span class="material-icons icon-pulse">contact_mail</span> Contact Me</h2>
+            <hr class="mx-auto">
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <p><i class="fa fa-user" style="color: #555;"></i>Jhansi Priya Murella</p>
+                    <p><i class="fa fa-envelope" style="color: #D44638;"></i><a href="mailto:jhansipriyamurellaa@gmail.com" style="text-decoration: none;">jhansipriyamurellaa@gmail.com</a></p>
+                    <p><i class="fa fa-phone" style="color: #28a745;"></i><a href="tel:+16363420984" style=" text-decoration: none;">+1(636)-342-0984</a></p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/jhansi-priya-712163357" target="_blank" style="color: #0077b5;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/__priya__murella__?igsh=NzdlbTVzb250cHM3" target="_blank" style="color: #E1306C;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form futuristic-form p-4">
+                    <form action="https://formsubmit.co/ajax/jhansipriyamurellaa@gmail.com" method="POST" id="contact-form">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="/">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" id="name" class="form-control futuristic-input" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control futuristic-input" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control futuristic-input" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" id="message" class="form-control futuristic-input" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn futuristic-btn" type="submit">
+                                <span class="material-icons">send</span> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container text-center">
+            <p>© Jhansi Priya. All Rights Reserved</p>
+        </div>
+    </div>
+
+</div> <a href="#" class="back-to-top" id="backToTop">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+        const url = form.action;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                showToast("Message sent successfully!", "success");
+                form.reset();
+            } else {
+                const errorData = await response.json();
+                showToast(errorData.message || "There was an error sending the message. Please try again.", "error");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            showToast("Network error. Please try again later.", "error");
+        }
+    });
+
+    function showToast(message, type = "info") {
+        const toast = document.createElement("div");
+        toast.innerText = message;
+        toast.style.position = "fixed";
+        toast.style.bottom = "20px";
+        toast.style.right = "20px";
+        toast.style.padding = "15px 20px";
+        toast.style.borderRadius = "8px";
+        toast.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+        toast.style.zIndex = 9999;
+        toast.style.fontWeight = "bold";
+        toast.style.fontSize = "16px";
+        toast.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+        toast.style.opacity = 1;
+        toast.style.transform = "translateY(0)";
+
+        if (type === "success") {
+            toast.style.backgroundColor = "#28a745";
+            toast.style.color = "#fff";
+        } else if (type === "error") {
+            toast.style.backgroundColor = "#dc3545";
+            toast.style.color = "#fff";
+        } else {
+            toast.style.backgroundColor = "#007bff";
+            toast.style.color = "#fff";
+        }
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.opacity = 0;
+            toast.style.transform = "translateY(20px)";
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+        const navbarCollapse = document.getElementById('navbarNav');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
+
+    const ethicalCollapseEl = document.getElementById('ethicalArgumentMaps');
+    const ethicalToggleButton = document.getElementById('ethicalToggleButton');
+
+    if (ethicalCollapseEl && ethicalToggleButton) {
+        ethicalCollapseEl.addEventListener('show.bs.collapse', function () {
+            ethicalToggleButton.innerText = "Close Argument Maps";
+            ethicalToggleButton.classList.remove("btn-primary");
+            ethicalToggleButton.classList.add("btn-danger");
+        });
+
+        ethicalCollapseEl.addEventListener('hide.bs.collapse', function () {
+            ethicalToggleButton.innerText = "View Argument Maps";
+            ethicalToggleButton.classList.remove("btn-danger");
+            ethicalToggleButton.classList.add("btn-primary");
+        });
+    }
+
+    const deloitteCollapseEl = document.getElementById('deloitteEAVisuals');
+    const deloitteToggleButton = document.getElementById('deloitteToggleButton');
+
+    if (deloitteCollapseEl && deloitteToggleButton) {
+        deloitteCollapseEl.addEventListener('show.bs.collapse', function () {
+            deloitteToggleButton.innerText = "Close EA Visuals";
+            deloitteToggleButton.classList.remove("btn-primary");
+            deloitteToggleButton.classList.add("btn-danger");
+        });
+
+        deloitteCollapseEl.addEventListener('hide.bs.collapse', function () {
+            deloitteToggleButton.innerText = "View EA Visuals";
+            deloitteToggleButton.classList.remove("btn-danger");
+            deloitteToggleButton.classList.add("btn-primary");
+        });
+    }
+
+    const ethicalModal = document.getElementById('ethicalDecisionModal');
+    if (ethicalModal) {
+        ethicalModal.addEventListener('shown.bs.modal', function () {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+        });
+    }
+
+    const deloitteModal = document.getElementById('deloitteEAModal');
+    if (deloitteModal) {
+        deloitteModal.addEventListener('shown.bs.modal', function () {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+        });
+    }
+
+    document.querySelectorAll('#onlineInsightsTabs button[data-bs-toggle="pill"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetPane = document.querySelector(btn.dataset.bsTarget);
+            if (targetPane) {
+                targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
