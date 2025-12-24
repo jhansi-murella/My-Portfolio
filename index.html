@@ -18,142 +18,181 @@
     <link rel="icon" href="img/jp.jpg" type="image/jpg">
 
     <style>
-        :root{
-    --violet:#7b61ff;
-    --lavender:#b7a6ff;
-    --rose:#ffd6e8;
-    --sky:#eaf4ff;
-    --ink:#2e2e38;
-    --soft-gray:#f6f7fb;
-    }
+/* ===============================
+   🦄 SOFT PROFESSIONAL UNICORN THEME
+================================= */
 
-/* Base */
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
+
 html {
-  scroll-behavior: smooth;
-  height: 100%;
+    scroll-behavior: smooth;
+    height: 100%;
+    box-sizing: border-box;
 }
+
 body {
-  min-height: 100vh;
-  background: linear-gradient(180deg,#f9f7ff,#eef2ff);
-  color: var(--ink);
-  overflow-x: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #f6c1e6, #b7a6ff, #eaf4ff);
+    color: #2e2e38;
+    box-sizing: border-box;
 }
 
 /* Navbar */
 .main-navbar {
-  background: linear-gradient(90deg,#5b4b8a,#7b61ff);
-  border-bottom: 1px solid rgba(255,255,255,.2);
-  box-shadow: 0 6px 25px rgba(123,97,255,.25);
-}
-.main-navbar .nav-link,
-.main-navbar .navbar-brand {
-  color:#fff;
-}
-.main-navbar .nav-link:hover {
-  color:#ffe6f2!important;
-  background:rgba(255,255,255,.15);
-  border-radius:30px;
+    background: linear-gradient(to right, #7b61ff, #b7a6ff);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 0.75rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(123,97,255,0.2);
 }
 
-/* Hero */
+.main-navbar .navbar-brand,
+.main-navbar .nav-link {
+    color: white;
+}
+
+.main-navbar .nav-link:hover {
+    color: #ffd6e8 !important;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 5px;
+}
+
+/* Header */
 #header {
-  background: linear-gradient(120deg,#7b61ff,#b7a6ff,#ffd6e8);
-  border-radius:24px;
-  box-shadow:0 25px 60px rgba(123,97,255,.35);
+    background: linear-gradient(120deg,#b7a6ff,#ffd6e8,#f6c1e6);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(123,97,255,0.2);
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
 }
-#header h1{
-  font-weight:800;
-  letter-spacing:-1px;
+
+#header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #7b61ff, #b7a6ff, #ffd6e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-#header .profile-img-hero{
-  border:6px solid white;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+#header p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
-#header .btn{
-  border-radius:50px;
-  font-weight:600;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+#header .btn, .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    background: linear-gradient(90deg,#7b61ff,#b7a6ff);
+    color: white;
+    box-shadow: 0 10px 25px rgba(123,97,255,0.25);
+    transition: all 0.3s ease;
+}
+
+#header .btn:hover, .btn:hover {
+    background: linear-gradient(90deg,#b7a6ff,#ffd6e8);
+    transform: translateY(-2px);
 }
 
 /* Sections */
-section{
-  background:white;
-  border-radius:20px;
-  padding:3rem 2rem;
-  box-shadow:0 20px 40px rgba(0,0,0,.05);
+section {
+    background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(123,97,255,0.15);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
 }
-section h2{
-  color:#5b4b8a;
+
+section h2 {
+    color: #7b61ff;
 }
-section .content-header hr{
-  border-top:4px solid var(--lavender);
+
+section .content-header hr {
+    border-top: 3px solid #b7a6ff;
+    width: 80px;
 }
 
 /* About */
-.about .img-fluid{
-  border:none;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(123,97,255,.2);
+.about .img-fluid {
+    border-radius: 12px;
+    border: 3px solid #ffd6e8;
+    box-shadow: 0 10px 30px rgba(123,97,255,0.15);
+}
+
+.about p, .about blockquote p {
+    color: #2e2e38;
 }
 
 /* Education & Experience */
-.edu-col{
-  background:linear-gradient(135deg,#ffe6f2,#fff);
-  border-left:6px solid var(--rose);
+.edu-col {
+    background: rgba(255,214,232,0.7);
+    border-left: 4px solid #ffb6d9;
 }
-.exp-col{
-  background:linear-gradient(135deg,#eaf4ff,#fff);
-  border-left:6px solid var(--lavender);
+.exp-col {
+    background: rgba(234,244,255,0.7);
+    border-left: 4px solid #b7a6ff;
 }
-.edu-col:hover,
-.exp-col:hover{
-  transform:translateY(-6px);
-  box-shadow:0 25px 50px rgba(123,97,255,.25);
+.edu-col:hover, .exp-col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(123,97,255,0.25);
 }
 
 /* Skills */
-.skills-section .card{
-  background:linear-gradient(145deg,#f3f0ff,#ffffff);
-  border-radius:18px;
+.skills-section .card {
+    background: rgba(183,166,255,0.2);
+    border-radius: 15px;
 }
-.skills-section .card:hover{
-  transform:translateY(-8px);
+.skills-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(123,97,255,0.2);
 }
 
 /* Portfolio */
-.portfolio-item .card{
-  border-radius:20px;
+.portfolio-item .card {
+    border-radius: 15px;
 }
-.portfolio-item .card img{
-  border:4px solid var(--lavender);
+.portfolio-item .card img {
+    border: 3px solid #b7a6ff;
 }
 
-/* Buttons */
-.futuristic-btn{
-  background:linear-gradient(90deg,#7b61ff,#b7a6ff);
-  box-shadow:0 10px 30px rgba(123,97,255,.4);
+/* Buttons throughout */
+button, .btn, a.button {
+    background: linear-gradient(90deg,#7b61ff,#b7a6ff);
+    color: white;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
-.futuristic-btn:hover{
-  background:linear-gradient(90deg,#b7a6ff,#ffd6e8);
+button:hover, .btn:hover, a.button:hover {
+    background: linear-gradient(90deg,#b7a6ff,#ffd6e8);
+    transform: translateY(-2px);
 }
 
 /* Footer */
-.footer{
-  background:linear-gradient(90deg,#5b4b8a,#7b61ff);
-  border-radius:30px;
+.footer {
+    background: linear-gradient(90deg,#7b61ff,#b7a6ff);
+    color: white;
+    border-radius: 12px;
 }
 
-/* Back to top */
-.back-to-top{
-  color:#7b61ff;
+/* Back-to-top */
+.back-to-top {
+    color: #7b61ff;
 }
-.back-to-top:hover{
-  color:#b7a6ff;
+.back-to-top:hover {
+    color: #b7a6ff;
 }
 </style>
+
 
 </head>
 <body>
