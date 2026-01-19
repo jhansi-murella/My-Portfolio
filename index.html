@@ -1367,7 +1367,28 @@
         </div>
     </a>
 </div>
-
+<div class="col-lg-4 col-md-6 portfolio-item">
+    <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#staffingOptimizationModal">
+        <div class="card card-hover h-100 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3209/3209109.png" alt="Staffing Optimization" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+                <h5 class="card-title">CLINICAL RESOURCE & STAFFING OPTIMIZATION</h5>
+                <p class="card-text">Machine Learning–Driven Workforce Forecasting</p>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item">
+    <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#alertFatigueModal">
+        <div class="card card-hover h-100 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2864/2864273.png" alt="Alert Fatigue Project" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+                <h5 class="card-title">REMOTE PATIENT MONITORING & ALERT FATIGUE</h5>
+                <p class="card-text">Smart Alert Prioritization & Clinical Decision Support</p>
+            </div>
+        </div>
+    </a>
+</div>
 <div class="modal fade" id="dataEngineerCertModal" tabindex="-1" aria-labelledby="dataEngineerCertModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
@@ -1397,7 +1418,106 @@
 </div>
         </div>
     </section>
+<div class="modal fade" id="staffingOptimizationModal" tabindex="-1" aria-labelledby="staffingOptimizationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(to right, #004d40, #00796b, #4db6ac);">
+                <h5 class="modal-title" id="staffingOptimizationLabel">Clinical Resource Utilization Tool</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <section class="modal-section text-center">
+                    <h2 class="display-6 fw-bold">📌 Project Overview</h2>
+                    <p class="lead px-lg-5">An advanced, data-driven healthcare analytics solution designed to replace reactive scheduling with predictive intelligence, minimizing overtime and reducing clinician burnout.</p>
+                </section>
 
+                <section class="modal-section bg-light">
+                    <h2>🧠 System Architecture</h2>
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 text-center">
+                            <img src="img/architecture_diagram.jpg" class="img-fluid rounded shadow-lg" alt="System Architecture">
+                            <p class="text-muted mt-2">Data Ingestion → ML Modeling → Predictive Dashboards</p>
+                        </div>
+                        <div class="col-lg-5">
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent"><strong>1. Data Ingestion:</strong> Sick calls, overtime history, and patient demand.</li>
+                                <li class="list-group-item bg-transparent"><strong>2. Modeling Layer:</strong> Dual-horizon forecasting via LGBM and LSTM.</li>
+                                <li class="list-group-item bg-transparent"><strong>3. Decision Layer:</strong> Prescriptive insights for hospital leadership.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-section">
+                    <h2 class="mb-4">🔍 Machine Learning Models</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100 shadow-sm">
+                                <h4 class="text-teal"><i class="fa fa-chart-line me-2"></i>LGBM (Short-Term)</h4>
+                                <img src="img/lgbm_chart.jpg" class="img-fluid rounded my-3" alt="LGBM Graph">
+                                <p><strong>Purpose:</strong> 30-day operational forecasting for OT hours and sick call rates. Chosen for high accuracy with low computational cost.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100 shadow-sm">
+                                <h4 class="text-teal"><i class="fa fa-history me-2"></i>LSTM (Long-Term)</h4>
+                                <img src="img/lstm_chart.jpg" class="img-fluid rounded my-3" alt="LSTM Graph">
+                                <p><strong>Purpose:</strong> 365-day strategic planning. Captures seasonal trends and long-term temporal dependencies in healthcare staffing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-section bg-dark text-white rounded-0 w-100 max-w-none">
+                    <h2 class="text-white">🔄 Existing vs. Proposed System</h2>
+                    <div class="table-responsive px-md-5 mt-4">
+                        <table class="table table-dark table-hover border-secondary">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Traditional System</th>
+                                    <th class="text-warning">Our Proposed ML Tool</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Scheduling</td><td>Rule-based assignments</td><td>Predictive ML-based planning</td></tr>
+                                <tr><td>Response</td><td>Reactive crisis handling</td><td>Proactive forecasting</td></tr>
+                                <tr><td>Policy</td><td>Static staffing</td><td>Adaptive workforce optimization</td></tr>
+                                <tr><td>Staffing</td><td>Jeopardy teams (Last resort)</td><td>Preventive resource allocation</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>📊 Key Impact</h3>
+                            <ul class="modal-section list-unstyled text-start w-100" style="box-shadow: none;">
+                                <li><i class="fa fa-check-circle text-success me-2"></i> Reduced financial inefficiencies</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i> Improved clinician well-being</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i> Enhanced patient care quality</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>🛠️ Technologies Used</h3>
+                            <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
+                                <span class="badge bg-secondary p-2">LGBM</span>
+                                <span class="badge bg-secondary p-2">LSTM</span>
+                                <span class="badge bg-secondary p-2">Python</span>
+                                <span class="badge bg-secondary p-2">Time-Series Forecasting</span>
+                                <span class="badge bg-secondary p-2">Healthcare Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center text-muted mb-4">
+                © 2026 Jhansi Priya – Clinical Resource Optimization Tool
+            </footer>
+        </div>
+    </div>
+</div>
     <div class="modal fade" id="childbirthModal" tabindex="-1" aria-labelledby="childbirthModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -1450,7 +1570,118 @@
             </div>
         </div>
     </div>
+<div class="modal fade" id="alertFatigueModal" tabindex="-1" aria-labelledby="alertFatigueLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header" style="background: linear-gradient(to right, #1a237e, #3949ab, #7986cb);">
+                <h5 class="modal-title" id="alertFatigueLabel">Improving Alert Fatigue in RPM Dashboards</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <section class="modal-section text-center">
+                    <h2 class="display-6 fw-bold">📌 Project Overview</h2>
+                    <p class="lead px-lg-5">A sophisticated RPM dashboard designed to combat clinician cognitive overload by filtering non-actionable alerts and highlighting critical health risks through intelligent prioritization.</p>
+                </section>
 
+                <section class="modal-section bg-light">
+                    <h2>🧠 System Architecture</h2>
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <img src="img/rpm_architecture.jpg" class="img-fluid rounded shadow" alt="RPM System Architecture">
+                            <p class="text-muted text-center mt-2">Architecture Flow: Ingestion → Logic Layer → Role-Based UI</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="accordion" id="architectureAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1">Data Ingestion Layer</button></h2>
+                                    <div id="acc1" class="accordion-collapse collapse show"><div class="accordion-body">Processes synthetic RPM data (Heart Rate, BP, Glucose) and handles missing values.</div></div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2">Processing & Logic</button></h2>
+                                    <div id="acc2" class="accordion-collapse collapse"><div class="accordion-body">Uses clinical thresholds to classify risk (Normal, Monitor, High Risk) and suppresses redundant notifications.</div></div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3">Application & Security</button></h2>
+                                    <div id="acc3" class="accordion-collapse collapse"><div class="accordion-body">Role-based access controls ensuring HIPAA-aligned data visibility for both providers and patients.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-section">
+                    <h2 class="mb-4">🔄 Traditional vs. Smart RPM</h2>
+                    <div class="table-responsive w-100 px-lg-5">
+                        <table class="table border">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Existing System</th>
+                                    <th>Our Proposed Solution</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Alert Logic</td><td>Alert-heavy / Noisy</td><td class="table-success fw-bold">Risk-based Prioritization</td></tr>
+                                <tr><td>Intervention</td><td>Reactive Monitoring</td><td class="table-success fw-bold">Proactive Trend-based Insights</td></tr>
+                                <tr><td>Clinician Burden</td><td>Cognitive Overload</td><td class="table-success fw-bold">Significant Fatigue Reduction</td></tr>
+                                <tr><td>Patient View</td><td>Data Volume Focused</td><td class="table-success fw-bold">Actionable Health Indicators</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="modal-section bg-light">
+                    <h2>📊 Key Visual Components</h2>
+                    <div class="row text-center g-4">
+                        <div class="col-md-4">
+                            <img src="img/rpm_kpi_cards.jpg" class="img-fluid rounded border mb-2" alt="KPI Cards">
+                            <h5>KPI Cards</h5>
+                            <p class="small">Color-coded health indicators for instant status updates.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/rpm_trends.jpg" class="img-fluid rounded border mb-2" alt="Trend Charts">
+                            <h5>Trend Analysis</h5>
+                            <p class="small">Weekly/Monthly vital metrics to detect early deterioration.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/rpm_sunburst.jpg" class="img-fluid rounded border mb-2" alt="Sunburst Viz">
+                            <h5>Activity Sunburst</h5>
+                            <p class="small">Advanced visualization linking activity levels to patient risk.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-section text-center">
+                    <div class="row w-100">
+                        <div class="col-md-6 border-end">
+                            <h3 class="mb-3 text-primary">🚀 Impact & Outcomes</h3>
+                            <ul class="list-unstyled text-start d-inline-block">
+                                <li><i class="fa fa-bolt text-warning me-2"></i> Faster identification of high-risk cases</li>
+                                <li><i class="fa fa-user-shield text-info me-2"></i> HIPAA-aligned data security</li>
+                                <li><i class="fa fa-smile-o text-success me-2"></i> Enhanced clinician morale and focus</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mb-3 text-primary">🛠️ Tech Stack</h3>
+                            <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                <span class="badge rounded-pill bg-dark">Next.js</span>
+                                <span class="badge rounded-pill bg-dark">Node.js</span>
+                                <span class="badge rounded-pill bg-dark">MongoDB</span>
+                                <span class="badge rounded-pill bg-dark">Express</span>
+                                <span class="badge rounded-pill bg-dark">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <footer class="text-center text-muted mb-4 py-3 border-top">
+                © 2026 Jhansi Priya – Improving Alert Fatigue Project
+            </footer>
+        </div>
+    </div>
+</div>
     <div class="modal fade" id="appliedAnalyticsModal" tabindex="-1" aria-labelledby="appliedAnalyticsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
